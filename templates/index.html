@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Senhas Seguras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        :root{
+            --bg: #f4f6f8;
+            --card: #ffffff;
+            --accent: #1f2937;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: var(--card);
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 6px 24px rgba(15,23,42,0.08);
+            width: 100%;
+            max-width: 560px;
+            text-align: center;
+        }
+        h1 { margin: 0 0 8px 0; color: var(--accent); }
+        p.lead { margin: 0 0 18px 0; color: #6b7280; }
+        form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        input[type=number] {
+            padding: 8px 10px;
+            width: 96px;
+            border-radius: 8px;
+            border: 1px solid #e6e9ee;
+        }
+        button {
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: none;
+            background: var(--accent);
+            color: white;
+            cursor: pointer;
+        }
+        button.secondary {
+            background: #374151;
+            opacity: 0.9;
+        }
+        .senha {
+            margin-top: 20px;
+            padding: 14px;
+            border-radius: 10px;
+            background: #f8fafc;
+            font-family: "Courier New", monospace;
+            word-break: break-all;
+            border: 1px dashed #e6eef8;
+        }
+        .meta { margin-top: 10px; color:#9ca3af; font-size: 0.9em;}
+        footer { margin-top: 18px; font-size: 0.85em; color:#9ca3af;}
+        .copy-btn {
+            display: inline-block;
+            margin-left: 8px;
+            padding: 6px 8px;
+            font-size: 0.9em;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>🔐 Gerador de Senhas Seguras</h1>
+        <p class="lead">Escolha o tamanho e gere uma senha forte. Ideal para estudos e portfólio.</p>
+
+        <form method="POST" id="form">
+            <label for="tamanho">Tamanho</label>
+            <input type="number" id="tamanho" name="tamanho" min="4" max="100" value="12" required>
+            <button type="submit">Gerar</button>
+            <button type="button" class="secondary" id="copiar">Copiar</button>
+        </form>
+
+        {% if senha %}
+            <div class="senha" id="senha">{{ senha }}</div>
+            <div class="meta">Senha gerada — copiada com um clique.</div>
+        {% else %}
+            <div class="senha" id="senha">Clique em "Gerar" para criar uma senha segura</div>
+        {% endif %}
+
+        <footer>
+            <div>Feito para o portfólio — ajuste livremente.</div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('copiar').addEventListener('click', function(){
+            const txt = document.getElementById('senha').innerText;
+            navigator.clipboard.writeText(txt).then(function(){
+                alert('Senha copiada para a área de transferência.');
+            }).catch(function(){
+                alert('Não foi possível copiar automaticamente. Selecione e copie manualmente.');
+            });
+        });
+    </script>
+</body>
+</html>
