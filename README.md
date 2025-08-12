@@ -36,15 +36,4 @@ Projeto simples em **Python + Flask** que gera senhas seguras aleatórias. Ideal
    http://127.0.0.1:5000
    ```
 
-## 📦 Enviar para o GitHub (comandos rápidos)
-```bash
-git init
-git add .
-git commit -m "Primeiro commit - Gerador de Senhas Seguras"
-git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/gerador-senhas.git
-git push -u origin main
-```
 
-## 📝 Licença
-Este projeto está sob a licença MIT — veja o arquivo `LICENSE`.
