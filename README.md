@@ -27,7 +27,7 @@ Criar um gerador de senhas que permita ao usuário escolher o tamanho da senha e
 ## ▶️ Como executar localmente
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/SEU-USUARIO/gerador-senhas.git
+   git clone https://github.com/alexandredoamarante/gerador-senhas.git
    cd gerador-senhas
    ```
 2. Crie um ambiente virtual (recomendado) e ative:
