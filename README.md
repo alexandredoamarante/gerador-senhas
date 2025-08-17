@@ -1,4 +1,4 @@
-# 🔐 Gerador de Senhas Seguras
+ # 🔐 Gerador de Senhas Seguras
 
 
 Este é um projeto simples desenvolvido em Python usando o framework Flask que gera senhas aleatórias seguras, com o tamanho definido pelo usuário.
@@ -50,5 +50,24 @@ Criar um gerador de senhas que permita ao usuário escolher o tamanho da senha e
    ```
    http://127.0.0.1:5000
    ```
+##O que aprendi com este projeto
+
+Durante o desenvolvimento deste projeto, aprendi e pratiquei:
+
+Criar e rodar uma aplicação simples usando Flask.
+
+Estruturar pastas e arquivos básicos de um projeto Flask (app.py, templates/).
+
+Usar HTML para criar uma interface básica integrada ao Flask.
+
+Gerar senhas seguras em Python utilizando o módulo random e combinando letras, números e símbolos.
+
+Criar e usar um arquivo requirements.txt para gerenciar dependências.
+
+Configurar e ativar um ambiente virtual (venv) no Python.
+
+Entender como rodar a aplicação localmente e acessar no navegador.
+
+Adicionar boas práticas ao repositório como .gitignore e LICENSE.
 
 
